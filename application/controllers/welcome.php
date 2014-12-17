@@ -21,8 +21,8 @@ class Welcome extends CI_Controller {
 	{
         $this->load->helpers('common');
         $this->load->model('demo_model', 'demo_model');
-        $list = $this->demo_model->get_list();pr($list);die;
-		$this->load->view('welcome_message');
+        $data = $this->demo_model->get_list();//pr($data);die;
+		$this->load->view('welcome_message',$data);
 	}
 }
 
